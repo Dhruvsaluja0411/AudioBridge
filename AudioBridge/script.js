@@ -1,3 +1,21 @@
+
+let input_lang;
+let output_lang;
+function input_language(idval){
+    input_lang = document.getElementById(idval).value;
+    console.log(output_lang + " " + input_lang);
+}
+function output_language(idval){
+    output_lang = document.getElementById(idval).value;
+    console.log(output_lang + " " + input_lang);
+}
+
+function myfilesave(){
+    console.log("HELLO");
+    myfile = document.getElementById("myfile").value;
+    console.log(myfile);
+}
+
 const nav = document.querySelector(".nav"),
   searchIcon = document.querySelector("#searchIcon"),
   navOpenBtn = document.querySelector(".navOpenBtn"),
@@ -161,3 +179,6 @@ searchInp.addEventListener("keyup", () => {
     options.innerHTML = arr ? arr : `<p style="margin-top: 10px;">Oops! Country not found</p>`;
 });
 selectBtn.addEventListener("click", () => wrapper.classList.toggle("active"));
+
+
+  

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <!-- Coding By CodingNepal - codingnepalweb.com -->
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,25 +11,26 @@
     <!-- Unicons CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-   <script src="script.js" defer></script>
-  </head>
-  <body>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
     <div class="container">
         <svg viewBox="0 0 960 600">
-          <symbol id="s-text">
-            <text text-anchor="middle" x="50%" y="50%">Language!</text>
-          </symbol>
-      
-          <g class = "g-ants">
-            <use xlink:href="#s-text" class="text-copy"></use>
-            <use xlink:href="#s-text" class="text-copy"></use>
-            <use xlink:href="#s-text" class="text-copy"></use>
-            <use xlink:href="#s-text" class="text-copy"></use>
-            <use xlink:href="#s-text" class="text-copy"></use>
-          </g>
+            <symbol id="s-text">
+                <text text-anchor="middle" x="50%" y="50%">Language!</text>
+            </symbol>
+
+            <g class="g-ants">
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+                <use xlink:href="#s-text" class="text-copy"></use>
+            </g>
         </svg>
-      </div>
-    <div class = 'text'>
+    </div>
+    <div class='text'>
         <p class="exp">Experience video magic</p>
         <p class="in">in your</p>
         <!-- <p class="lang1">Language!</p> -->
@@ -36,71 +38,72 @@
         <p class="lang3">Language!</p>
     </div>
     <div class="arrow">
-        <i class="fas fa-arrow-right"></i> 
+        <i class="fas fa-arrow-right"></i>
         <!-- <p>to</p> -->
     </div>
     <form>
-    <div class="drag-area">
-        <div class="icon">
-            <i class="fas fa-cloud-upload-alt"></i> 
+        <div class="drag-area">
+            <div class="icon">
+                <i class="fas fa-cloud-upload-alt"></i>
+            </div>
+            <div class="D">
+                <span>Drag File</span>
+                <span>OR</span>
+            </div>
+            <input type="file" hidden  onchange="myfilesave()">
+            <button onclick="myfilesave()" id="myfile">Browse File</button>
         </div>
-    <div class="D">
-        <span>Drag File</span>
-        <span>OR</span>
-    </div>
-        <button>Browse File</button>
-        <input type="file" hidden>
-    </div>
-    <div class="in-lang">
-        <select name="Language" class="in-lang-1">
-            <option value="" disabled selected>Select an option</option>
-            <option value="en">English</option>
-            <option value="hi">Hindi</option>
-            <option value="pu">Punjabi</option>
-            <option value="sp">Spanish</option>
-            <option value="fr">French</option>
-            <option value="ta">Tamil</option>
-        </select>
-    </div>
-    <div class="in-lang">
-        <select name="Language" class="in-lang-2">
-            <option value="" disabled selected>Select an option</option>
-            <option value="en">English</option>
-            <option value="hi">Hindi</option>
-            <option value="pu">Punjabi</option>
-            <option value="sp">Spanish</option>
-            <option value="fr">French</option>
-            <option value="ta">Tamil</option>
-        </select>
-    </div>
-    <button type="submit" class="submit-button">Convert</button>
+        <div class="in-lang">
+            <select name="Language" class="in-lang-1" id="Language1" onchange="input_language('Language1')">
+                <option value="" disabled selected>Select an option</option>
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="pu">Punjabi</option>
+                <option value="sp">Spanish</option>
+                <option value="fr">French</option>
+                <option value="ta">Tamil</option>
+            </select>
+        </div>
+        <div class="in-lang">
+            <select name="Language" class="in-lang-2" id="Language2" onchange="output_language('Language2')">
+                <option value="" disabled selected>Select an option</option>
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="pu">Punjabi</option>
+                <option value="sp">Spanish</option>
+                <option value="fr">French</option>
+                <option value="ta">Tamil</option>
+            </select>
+        </div>
+        <button type="submit" class="submit-button">Convert</button>
     </form>
     <!-- <img src="bg.png" alt="image"> -->
     <nav class="nav">
-    <i class="uil uil-bars navOpenBtn"></i>
-    <div> 
-    
-    <a href="#" class="logo">
-        <i class="fas fa-wave-square"></i>
-        AudioBridge
-    </a>
-    </div>
+        <i class="uil uil-bars navOpenBtn"></i>
+        <div>
 
-      <ul class="nav-links">
-        <i class="uil uil-times navCloseBtn"></i>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Education</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact Us</a></li>
-      </ul>
+            <a href="#" class="logo">
+                <i class="fas fa-wave-square"></i>
+                AudioBridge
+            </a>
+        </div>
 
-      <i class="uil uil-search search-icon" id="searchIcon"></i>
+        <ul class="nav-links">
+            <i class="uil uil-times navCloseBtn"></i>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Education</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
 
-      <div class="search-box">
-        <i class="uil uil-search search-icon"></i>
-        <input type="text" placeholder="Search here..." />
-      </div>
+        <i class="uil uil-search search-icon" id="searchIcon"></i>
+
+        <div class="search-box">
+            <i class="uil uil-search search-icon"></i>
+            <input type="text" placeholder="Search here..." />
+        </div>
     </nav>
-  </body>
+</body>
+
 </html>
